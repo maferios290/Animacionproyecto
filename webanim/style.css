@@ -1,0 +1,54 @@
+body {
+    background-image: url('fondo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    margin: 0;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.message {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: rgb(23, 21, 21);
+    border-radius: 10px;
+    position: absolute;
+    animation: blink 2s infinite, moveUpDown 3s ease-in-out infinite, moveLeftRight 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+    0% { color: red; }
+    25% { color: yellow; }
+    50% { color: green; }
+    75% { color: blue; }
+    100% { color: purple; }
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(150px); 
+    }
+    100% {
+        transform: translateY(0); 
+    }
+}
+
+/* Animación de movimiento de izquierda a derecha */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0); 
+    }
+    50% {
+        transform: translateX(150px); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
